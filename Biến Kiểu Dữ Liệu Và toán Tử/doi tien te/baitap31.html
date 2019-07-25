@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bai tap31</title>
+</head>
+
+<body>
+    <form>
+        <p>Amount</p>
+        <input type="text" id="money"> <br>
+
+
+        <p>From Currency</p>
+        <select id="fromCurrency">
+            <option value="VND">VNĐ</option>
+            <option value="USD">Dola</option>
+        </select>
+
+
+        <p>To Currency</p>
+        <select id="toCurrency">
+            <option value="USD">Dola</option>
+            <option value="VND">VNĐ</option>
+        </select>
+
+        <br>
+        <input type="button" value="Conver" onclick="changeMoney()"> </input>
+        <p id="result"></p>
+        <script>
+            function changeMoney() {
+       
+                let money = parseInt(document.getElementById("money").value);
+                let FromCurrency = document.getElementById("fromCurrency").value;
+                let ToCurrency = document.getElementById("toCurrency").value;
+                if (FromCurrency == "USD" && ToCurrency == "VND") {
+                    let VND = money * 23000;
+                    document.getElementById("result").innerHTML = VND + "VNĐ";
+                }
+                if (FromCurrency == "VND" && ToCurrency == "USD") {
+                    let USD = money / 23000;
+                    document.getElementById("result").innerHTML = USD + "USD";
+                }
+            }
+
+
+
+        </script>
+    </form>
+</body>
+
+</html>
