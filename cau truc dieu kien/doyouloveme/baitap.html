@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+        <body>
+            <h1>Do You Love Me</h1>
+                <input type="button" value=" YES " onclick="yesClick()"/>
+                <input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute"/>
+                <script>
+                    function yesClick(){
+                        alert("Mình Hỏi đùa thôi. =((");
+                    }
+                    function noHover() {
+                    var x = Math.round(Math.random() * window.innerWidth);
+                    var y = Math.round(Math.random() * window.innerHeight);
+                    document.getElementById('btnNo').style.left = x + 'px';
+                    document.getElementById('btnNo').style.top = y + 'px';
+                    }
+                </script>
+        </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Tính Diện Tích Hình Vuông</h1>
+    </head>
+    <body>
+            <input type = "number" id="a">
+            <input type = "button" value ="tinhDT" onclick="TDT()"> </input></br>
+            <p3 id="result"></p3>
+            <script>
+                function TDT() {
+                    let r = parseInt(document.getElementById("a").value);
+                    if (r > 0) {
+                        let DT = r*r;
+                        document.getElementById("result").innerHTML = "Diện tích hình vuông là " + DT ;
+                    } else {
+                        document.getElementById("result").innerHTML = "Không tồn tại hình vuông";
+                    }
+                }
+            </script>
+    </body>
+</html>

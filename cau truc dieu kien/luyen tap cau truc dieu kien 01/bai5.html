@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Xếp Lực Học</h1>
+    </head>
+    <body>
+        <p>Điêm KT</p>
+        <input type = "number" id = "c1">
+        <p>Điêm giữa kì</p>
+        <input type = "number" id = "c2">
+        <p>Điêm cuối kì</p>
+        <input type = "number" id = "c3">
+        <input type = "button" value ="Xếp Hạng" onclick="XH()"> </input></br>
+        <p3 id="result"></p3>
+        <script>
+            function XH() {
+            let a1 = parseInt(document.getElementById("c1").value);
+            let a2 = parseInt(document.getElementById("c2").value);
+            let a3 = parseInt(document.getElementById("c3").value);
+            let DXH = (a1 + a2*2 + a3*3)/6;
+            if (DXH>8.0) {
+                document.getElementById("result").innerHTML =  DXH + " Học Lực giỏi";
+            }   else if (DXH>6.5) {
+                document.getElementById("result").innerHTML =  DXH + " Học Lực Khá";
+            }   else if (DXH>5) {
+                document.getElementById("result").innerHTML =  DXH + " Học Lực Yếu";
+            }   else if (DXH>3.5) {
+                document.getElementById("result").innerHTML =  DXH + " Học Lực Kém";
+            }
+            }
+        </script>
+    </body>
+</html>

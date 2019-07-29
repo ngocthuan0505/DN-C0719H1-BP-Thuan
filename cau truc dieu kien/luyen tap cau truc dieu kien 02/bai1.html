@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Chuyển từ độc C sang độ F</h1>
+    </head>
+    <body>
+            <input type="number" id="nhietDo"> <br>
+            <select id="chuyenDo">
+                    <option value="C">Độ C</option>
+                    <option value="F">Độ F</option>
+            </select>
+            <input type = "button" value ="Chuyển Độ" onclick="CND()"> </input></br>
+            <p3 id="result"></p3>
+            <script>
+                function CND() {
+                    let a = parseInt(document.getElementById("nhietDo").value);
+                    let DO = document.getElementById("chuyenDo").value;
+                    if (DO == "C") {
+                        let F = (a*9)/5 + 32;
+                        document.getElementById("result").innerHTML = "Nhiệt độ F là " + F;
+                    } else {
+                        let C = ((a-32)*5)/9;
+                        document.getElementById("result").innerHTML = "Nhiệt độ C là " + C;   
+                    }
+                }
+            </script>
+    </body>
+</html>

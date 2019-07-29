@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Chuyển từ mét sang feet</h1>
+    </head>
+    <body>
+        <input type = "number" id="c">
+        <select id="chuyenDo">
+                <option value="M">mét</option>
+                <option value="F">feet</option>
+        <input type = "button" value ="chuyenDoi" onclick="CD()"> </input></br>
+        <p3 id="result"></p3>
+        <script>
+            function CD() {
+                let a = parseInt(document.getElementById("c").value);
+                let GT = document.getElementById("chuyenDo").value;
+                if (GT == "M") {
+                    let f = a * 3.2808;
+                document.getElementById("result").innerHTML = "Kết quả là " + f + "feet";
+                } else {
+                    let m = a / 3.2808;
+                document.getElementById("result").innerHTML = "Kết quả là " + m + "met";
+                }
+            }
+        </script>
+    </body>
+
+</html>
