@@ -1,0 +1,37 @@
+<head>
+    <h1>Từ Điển</h1>
+</head>
+
+<body>
+    <input type="text" id="nhapTuKhoa"></input>
+    <input type="button" id="tiengAnh" value="Chuyển sang TV" onclick="tuDienTA()"></input>
+    <input type="button" id="tiengViet" value="Chuyển sang TA" onclick="tuDienTV()"></input>
+    <script>
+        function tuDienTA() {
+            let TK = parseInt(document.getElementById("nhapTuKhoa").value);
+            let TA = ["one", "two", "three", "four"];
+            let TV = ["một", "hai", "ba", "bốn"];
+
+            for (let i = 0; i < TA.length; i++) {
+                if (TK == TA[i]) {
+
+                    alert("Nghĩa Là" + TV[i]);
+                }
+            }
+        }
+        function tuDienTV() {
+            let TK = parseInt(document.getElementById("nhapTuKhoa").value);
+            let TA = ["one", "two", "three", "four"];
+            let TV = ["một", "hai", "ba", "bốn"];
+
+            for (let i = 0; i < TV.length; i++) {
+                if (TK == TV[i]) {
+
+                    alert("Nghĩa Là" + TA[i]);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

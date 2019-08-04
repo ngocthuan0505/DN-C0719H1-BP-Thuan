@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Bảng cửu chương</h1>
+    </head>
+    <body>
+        <script>
+            let a;
+                a = "<table border =1 weight=100%>"
+            for(i=1;i<=9;i++) {
+                a = a + "<tr>";
+                  for(n=2;n<=9;n++) {  
+                  a = a + "<td>" +n + "x" + i +"="+ (n*i) + "</td>";
+                }
+                    a = a + "</tr>"; 
+                }
+                    a = a + "</table>";
+                    document.write(a);
+            
+        </script>
+    </body>
+
+</html>
